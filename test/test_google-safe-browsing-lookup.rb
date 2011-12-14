@@ -3,7 +3,7 @@ require 'helper'
 class TestGoogleSafeBrowsingLookup < Test::Unit::TestCase
   	context "Lookup client" do
     	setup do
-      		@client = SafeBrowsingLookup.new('put_the_Google_API_key_here') # ABQIAAAAjxXOBkMTUaO3n4EntOSVNBSi3UkDHIzJx7sgnXlLk1Qr4CizhQ
+      		@client = SafeBrowsingLookup.new('put_the_Google_API_key_here')
 	  		@mock = MockClient.new('put_the_Google_API_key_here')
     	end
 
@@ -24,7 +24,7 @@ class TestGoogleSafeBrowsingLookup < Test::Unit::TestCase
 			assert_equal 'ok', 	results['http://www.google.org/'], 		"ok should be returned"
 		end
 
-		should "create parse the server response" do
+		should "parse the server response" do
 			response = "ok\nphishing"
 
 			results = @mock.parse(['http://www.google.com/', 'http://www.google.org/'], response)
