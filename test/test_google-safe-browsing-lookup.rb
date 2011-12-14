@@ -19,7 +19,7 @@ class TestGoogleSafeBrowsingLookup < Test::Unit::TestCase
 		should "create a hash URL => 'ok'" do
 			results = @mock.ok(['http://www.google.com/', 'http://www.google.org/'])
 
-			assert_equal 2, 		results.length, 					"Number of keys should match number of URLs"
+			assert_equal 2, 	results.length, 						"Number of keys should match number of URLs"
 			assert_equal 'ok', 	results['http://www.google.com/'], 		"ok should be returned"
 			assert_equal 'ok', 	results['http://www.google.org/'], 		"ok should be returned"
 		end
@@ -29,8 +29,8 @@ class TestGoogleSafeBrowsingLookup < Test::Unit::TestCase
 
 			results = @mock.parse(['http://www.google.com/', 'http://www.google.org/'], response)
 
-			assert_equal 2, 		results.length, 						"Number of keys should match number of URLs"
-			assert_equal 'ok', 	results['http://www.google.com/'], 			"ok should be returned"
+			assert_equal 2, 			results.length, 					"Number of keys should match number of URLs"
+			assert_equal 'ok', 			results['http://www.google.com/'], 	"ok should be returned"
 			assert_equal 'phishing', 	results['http://www.google.org/'], 	"phishing should be returned"
 		end
 

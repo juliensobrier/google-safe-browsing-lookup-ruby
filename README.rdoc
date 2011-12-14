@@ -1,6 +1,6 @@
 = google-safe-browsing-lookup
 
-Google Safe Brosing Lookup library for Ruby.
+Google Safe Browsing Lookup library for Ruby.
 
 If you need to check less than 10,000 URLs a day against the Google Safe Browsing v2 API (http://code.google.com/apis/safebrowsing/), you can use the Lookup API (http://code.google.com/apis/safebrowsing/lookup_guide.html) as a lighter alternative to the more complex API (http://code.google.com/apis/safebrowsing/developers_guide_v2.html).
 
