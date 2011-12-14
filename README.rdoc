@@ -1,0 +1,36 @@
+= google-safe-browsing-lookup
+
+Google Safe Brosing Lookup library for Ruby.
+
+If you need to check less than 10,000 URLs a day against the Google Safe Browsing v2 API (http://code.google.com/apis/safebrowsing/), you can use the Lookup API (http://code.google.com/apis/safebrowsing/lookup_guide.html) as a lighter alternative to the more complex API (http://code.google.com/apis/safebrowsing/developers_guide_v2.html).
+
+You need to get an API key from Google at http://code.google.com/apis/safebrowsing/key_signup.html
+
+== Build and install google-safe-browsing-lookup
+
+    git clone https://github.com/juliensobrier/google-safe-browsing-lookup-ruby
+    rake build
+    rake test
+    rake install
+
+Or
+
+    gem install google-safe-browsing-lookup
+
+
+
+== Contributing to google-safe-browsing-lookup
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Julien Sobrier. See LICENSE.txt for
+further details.
+
