@@ -1,7 +1,5 @@
 source "http://rubygems.org"
-# Add dependencies required to use your google-safe-browsing-lookup.
-
-gem "url", ">= 0"
+# Dependencies required to use your google-safe-browsing-lookup.
 
 
 # Dependencies to develop google-safe-browsing-lookup.

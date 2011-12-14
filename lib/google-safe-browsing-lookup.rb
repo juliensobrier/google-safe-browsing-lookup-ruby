@@ -4,12 +4,11 @@
 # See README.rdoc for more information about Google Safe Browsing v2 API
 # and this library.
 #
-# Author:: Julien Sobrier (mailto:jsobrier@browshot.com)
+# Author:: Julien Sobrier (mailto:julien@sobrier.net)
 # Copyright:: Copyright (c) 2011 Julien Sobrier
 # License:: Distributes under the same terms as Ruby
 
 require 'uri'
-require 'url'
 require 'net/https'
 
 class SafeBrowsingLookup
@@ -123,7 +122,7 @@ class SafeBrowsingLookup
 			url = "http://#{url}"
 		end
 
-		uri = URL.new(url)
+		uri = URI.new(url)
 		
 		return uri.to_s
 	end
