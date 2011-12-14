@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "google-safe-browsing-lookup"
-  gem.homepage = "http://github.com/juliensobrier/google-safe-browsing-lookup"
+  gem.homepage = "http://github.com/juliensobrier/google-safe-browsing-lookup-ruby"
   gem.license = "MIT"
   gem.summary = "Ruby library for the Google Safe Browsing v2 Lookup API"
   gem.description = "Google Safe Browsing v2 Lookup is a lighter alternative to the full API. The service allows users to check up to 10,000 URLs a day against their list og phishing and malicious sites. A free API key is required."
