@@ -29,7 +29,7 @@ class SafeBrowsingLookup
 	#
 	# +key+:: API key
 	# +debug+:: Set to true to print debug & error output to the standard output. false (disabled) by default.
-	# +debug+:: Set to true to print error output to the standard output. false (disabled) by default.
+	# +error+:: Set to true to print error output to the standard output. false (disabled) by default.
 	def initialize(key='', debug=false, error=false)
 		@key = key || ''
 		@debug = debug || false
@@ -43,11 +43,11 @@ class SafeBrowsingLookup
 		raise ArgumentError, "Missing API key" if (@key == '')
 	end
 
-	# Lookup a list URLs against the Google Safe Browsing v2 lists.
+	# Lookup a list of URLs against the Google Safe Browsing v2 lists.
 	#
-	# Returns a hash <url>: <Gooogle match>. The possible list of values for <Gooogle match> are: "ok" (no match), "malware", "phishing", "malware,phishing" (match both lists) and "error".
+	# Returns a hash <url>: <Gooogle match>. The possible values for <Gooogle match> are: "ok" (no match), "malware", "phishing", "malware,phishing" (match both lists) and "error".
 	# 
-	# +urls+:: List of URLs to lookup. The Lookup API allows only 10,000 URL checks a day. if you need more, find a Ruby implementation of the full Google Safe brosing v2 API. Each requests must contain 500 URLs at most. The lookup() method will split the list of URLS in blocks of 500 URLs if needed.
+	# +urls+:: List of URLs to lookup. The Lookup API allows only 10,000 URL checks a day. If you need more, find a Ruby implementation of the full Google Safe Browsing v2 API. Each requests must contain 500 URLs at most. The lookup() method will split the list of URLS in blocks of 500 URLs if needed.
 	def lookup(urls='')
 		if (urls.respond_to?('each') == false)
 			urls = Array.new(1, urls)
