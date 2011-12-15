@@ -66,7 +66,7 @@ class SafeBrowsingLookup
 				body = body + "\n" + canonical(url)
 			end
 
-			debug("BODY:\n#{body}\n\n");
+			debug("BODY:\n#{body}\n\n")
 			uri = URI.parse("https://sb-ssl.google.com/safebrowsing/api/lookup?client=ruby&apikey=#{@key}&appver=#{@version}&pver=#{@api_version}")
 			
 			http = Net::HTTP.new(uri.host, uri.port)
@@ -132,9 +132,9 @@ class SafeBrowsingLookup
 		lines = response.split("\n")
 
 		if (urls.length != lines.length)
-			error("Number of URLs in the reponse does not match the number of URLs in the request");
-			error("#{urls.length} / #{lines.length}");
-			error(response);
+			error("Number of URLs in the reponse does not match the number of URLs in the request")
+			debug("#{urls.length} / #{lines.length}")
+			debug(response);
 			return errors(urls);
 		end
 
