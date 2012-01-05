@@ -122,7 +122,7 @@ class SafeBrowsingLookup
 			url = "http://#{url}"
 		end
 
-		uri = URI.new(url)
+		uri = URI.parse(url)
 		
 		return uri.to_s
 	end
