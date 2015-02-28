@@ -36,8 +36,8 @@ class SafeBrowsingLookup
 		@error = error || false
 		@last_error = ''
 
-		@version = '0.1'
-		@api_version = '3.0'
+		@version = '0.2'
+		@api_version = '3.1'
 		
 
 		raise ArgumentError, "Missing API key" if (@key == '')
@@ -67,7 +67,7 @@ class SafeBrowsingLookup
 			end
 
 			debug("BODY:\n#{body}\n\n")
-			uri = URI.parse("https://sb-ssl.google.com/safebrowsing/api/lookup?client=ruby&apikey=#{@key}&appver=#{@version}&pver=#{@api_version}")
+			uri = URI.parse("https://sb-ssl.google.com/safebrowsing/api/lookup?client=ruby&key=#{@key}&appver=#{@version}&pver=#{@api_version}")
 			
 			http = Net::HTTP.new(uri.host, uri.port)
 			http.open_timeout = 30
