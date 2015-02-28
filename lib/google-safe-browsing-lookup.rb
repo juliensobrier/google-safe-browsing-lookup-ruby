@@ -1,11 +1,11 @@
 # The library requires an API key from Google.
-# Sign up for a free key a http://code.google.com/apis/safebrowsing/key_signup.html
+# Sign up for a free key a https://developers.google.com/safe-browsing/lookup_guide#GettingStarted
 #
-# See README.rdoc for more information about Google Safe Browsing v2 API
+# See README.rdoc for more information about Google Safe Browsing v3 API
 # and this library.
 #
 # Author:: Julien Sobrier (mailto:julien@sobrier.net)
-# Copyright:: Copyright (c) 2011 Julien Sobrier
+# Copyright:: Copyright (c) 2015 Julien Sobrier
 # License:: Distributes under the same terms as Ruby
 
 require 'uri'
