@@ -99,7 +99,7 @@ class SafeBrowsingLookup
 					results.merge!( errors(inputs) )
 
 				else
-					self.error("Unexpected server response: #{response.code}")
+					error("Unexpected server response: #{response.code}")
 					results.merge!( errors(inputs) )
 			end
 
